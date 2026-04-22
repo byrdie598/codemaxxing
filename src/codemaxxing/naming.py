@@ -4,6 +4,7 @@ CORPORATE_PREFIXES = [
     "Abstract", "Base", "Default", "Internal", "Core", "Enhanced", "Optimized",
     "Legacy", "Modern", "Enterprise", "Cloud", "Distributed", "Scalable",
     "Dynamic", "Static", "Global", "Local", "Custom", "Generic", "Standard",
+    "Normal", "Corporate", "Deoptimized", "Compiled", "Self-Hosted",
 ]
 
 CORPORATE_NOUNS = [
@@ -16,13 +17,15 @@ CORPORATE_NOUNS = [
     "Delegate", "Registry", "Configurator", "Initializer", "Serializer",
     "Deserializer", "Converter", "Mapper", "Wrapper", "Connector",
     "Bean", "Module", "Component", "Endpoint", "Gateway", "Middleware",
+    "AI", "Kernel", "Program", "Executable", "Malware",
 ]
 
 CORPORATE_SUFFIXES = [
     "Impl", "Base", "Abstract", "Interface", "Helper", "Util", "Utils",
     "Config", "Context", "State", "Result", "Response", "Request",
     "Exception", "Error", "Type", "Kind", "Spec", "Definition", "Descriptor",
-    "Info", "Data", "Model", "Entity", "Record", "Value", "Pair",
+    "Info", "Data", "Model", "Entity", "Record", "Value", "Pair", "SourceCode",
+    "Binaries",
 ]
 
 CHAOS_WORDS = [
@@ -34,12 +37,13 @@ CHAOS_WORDS = [
     "Chungus", "Dank", "Stonks", "Bonk", "Oof", "Yoink", "Sheesh",
     "Drip", "Glizzy", "Goated", "Slaps", "Hits", "Bussin",
     "xX_Destroyer_Xx", "L_plus_ratio", "skill_issue", "no_bitches",
-]
+    "Dih", "67", "Tuff", "Mango", "Mustard",
+] 
 
 CHAOS_PREFIXES = [
     "Ultra", "Mega", "Giga", "Hyper", "Super", "Turbo", "Maximum",
     "Extreme", "Absolute", "Total", "Final", "Ultimate", "Supreme",
-    "Legendary", "Mythical", "Ascended", "Transcendent", "Omega",
+    "Legendary", "Mythical", "Ascended", "Transcendent", "Omega", "Diddy", "67",
 ]
 
 CORPORATE_METHODS = [
@@ -49,7 +53,7 @@ CORPORATE_METHODS = [
     "render", "build", "create", "destroy", "update", "delete", "fetch",
     "load", "save", "persist", "cache", "invalidate", "refresh", "sync",
     "authenticate", "authorize", "encrypt", "decrypt", "compress", "decompress",
-    "normalize", "denormalize", "sanitize", "format", "marshal", "unmarshal",
+    "normalize", "denormalize", "sanitize", "format", "marshal", "unmarshal", "compile", "decompile",
 ]
 
 CHAOS_METHODS = [
@@ -58,7 +62,7 @@ CHAOS_METHODS = [
     "todo_fix_later", "hack_around_it", "ship_it", "lgtm", "works_on_my_machine",
     "dont_touch_this", "here_be_dragons", "abandon_all_hope", "cry",
     "pray_to_the_machine_spirit", "sacrifice_to_the_compiler", "cope",
-    "seethe", "mald", "touch_grass", "go_outside",
+    "seethe", "mald", "touch_grass", "go_outside", "just_hand_me_the_friggin_packet_yo", "take_this_offline",
 ]
 
 CORPORATE_VARS = [
@@ -66,7 +70,7 @@ CORPORATE_VARS = [
     "state", "status", "count", "index", "item", "element", "node",
     "entity", "record", "entry", "instance", "reference", "target",
     "source", "destination", "input_data", "output_data", "buffer",
-    "cache_entry", "metadata", "payload", "params", "options", "settings",
+    "cache_entry", "metadata", "payload", "params", "options", "settings", "contributions", "value",
 ]
 
 CHAOS_VARS = [
@@ -74,7 +78,7 @@ CHAOS_VARS = [
     "temp_but_permanent", "this_shouldnt_work", "magic_number",
     "dont_ask", "legacy_pain", "tech_debt", "god_object", "spaghetti",
     "yolo_var", "fix_me_please", "cursed_value", "forbidden_knowledge",
-    "the_darkness", "eldritch_data", "haunted_reference", "it_lives",
+    "the_darkness", "eldritch_data", "haunted_reference", "it_lives", "my_variable", "chicken_stars",
 ]
 
 
@@ -117,7 +121,7 @@ def java_package(sanity: float) -> str:
 def go_package(sanity: float) -> str:
     if sanity > 0.5:
         return random.choice(["service", "handler", "middleware", "repository", "controller", "util"])
-    return random.choice(["yeet", "bruh", "skibidi", "sus", "ohio", "rizz"])
+    return random.choice(["tuff", "bruh", "skibidi", "sus", "ohio", "rizz"])
 
 
 def commit_message(sanity: float, commit_num: int) -> str:
@@ -157,6 +161,8 @@ def commit_message(sanity: float, commit_num: int) -> str:
         "added more lines because more is better",
         "i am mass of code. i am inevitable.",
         "this is fine 🔥",
+        "if u cant understand this rtfm for me please",
+        "this 100% works i tested it",
     ]
 
     return _blend(corporate_messages, chaos_messages, sanity)
