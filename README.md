@@ -29,7 +29,7 @@ Why write meaningful code when you can write pure, unadulterated slop?
 ## Installation
 
 ```bash
-git clone https://github.com/jshchnz/codemaxxing.git
+git clone https://github.com/byrdie598/codemaxxing.git
 cd codemaxxing
 pip install .
 ```
